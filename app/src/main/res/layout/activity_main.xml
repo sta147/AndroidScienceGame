@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="kayani.com.sciencegamenew.MainActivity"
+    android:background="@drawable/space_bg">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newgame"
+        android:id="@+id/btn_play"
+        android:textColor="#ffffffff"
+        android:background="#ffffdc00"
+        android:layout_marginBottom="63dp"
+        android:layout_above="@+id/btn_help"
+        android:layout_alignRight="@+id/btn_help"
+        android:layout_alignEnd="@+id/btn_help"
+        android:layout_alignLeft="@+id/btn_help"
+        android:layout_alignStart="@+id/btn_help" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_string"
+        android:id="@+id/btn_help"
+        android:textColor="#ffffffff"
+        android:background="#ffffdc00"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scores_string"
+        android:id="@+id/btn_scores"
+        android:layout_marginTop="60dp"
+        android:textColor="#ffffffff"
+        android:background="#ffffdc00"
+        android:layout_below="@+id/btn_help"
+        android:layout_alignLeft="@+id/btn_help"
+        android:layout_alignStart="@+id/btn_help"
+        android:layout_alignRight="@+id/btn_help"
+        android:layout_alignEnd="@+id/btn_help" />
+
+</RelativeLayout>
