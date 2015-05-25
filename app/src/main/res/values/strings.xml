@@ -9,5 +9,9 @@
     <string name="newgame">New Game</string>
     <string name="help_string">Help</string>
     <string name="scores_string">Scores</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="NextQuestion">Next</string>
+    <string name="title_activity_finish">FinishActivity</string>
+    <string name="str_well_done">Well Done! You\'ve successfuly completed the game! ;)</string>
 
 </resources>

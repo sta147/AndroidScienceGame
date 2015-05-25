@@ -37,6 +37,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="kayani.com.sciencegamenew.MainActivity" />
         </activity>
+        <activity
+            android:name=".QuizActivity"
+            android:label="@string/title_activity_quiz" >
+        </activity>
+        <activity
+            android:name=".FinishActivity"
+            android:label="@string/title_activity_finish"
+            android:parentActivityName=".QuizActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kayani.com.sciencegamenew.QuizActivity" />
+        </activity>
     </application>
 
 </manifest>

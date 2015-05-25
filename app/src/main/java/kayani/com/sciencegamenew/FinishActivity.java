@@ -6,25 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class PlayActivity extends ActionBarActivity {
+public class FinishActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //turn title off
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        // sets tge screen to full screen
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-//        setContentView(R.layout.activity_play);
-        setContentView(new GamePanel(this));
+        setContentView(R.layout.activity_finish);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_play, menu);
+        getMenuInflater().inflate(R.menu.menu_finish, menu);
         return true;
     }
 
