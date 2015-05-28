@@ -18,22 +18,22 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/newgame"
+        android:text="@string/start"
         android:id="@+id/btn_play"
         android:textColor="#ffffffff"
         android:background="#ffffdc00"
         android:layout_marginBottom="63dp"
-        android:layout_above="@+id/btn_help"
-        android:layout_alignRight="@+id/btn_help"
-        android:layout_alignEnd="@+id/btn_help"
-        android:layout_alignLeft="@+id/btn_help"
-        android:layout_alignStart="@+id/btn_help" />
+        android:layout_above="@+id/btn_fact"
+        android:layout_alignRight="@+id/btn_fact"
+        android:layout_alignEnd="@+id/btn_fact"
+        android:layout_alignLeft="@+id/btn_fact"
+        android:layout_alignStart="@+id/btn_fact" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/help_string"
-        android:id="@+id/btn_help"
+        android:text="@string/fun_facts_string"
+        android:id="@+id/btn_fact"
         android:textColor="#ffffffff"
         android:background="#ffffdc00"
         android:layout_centerVertical="true"
@@ -45,15 +45,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/scores_string"
-        android:id="@+id/btn_scores"
+        android:text="@string/str_video"
+        android:id="@+id/btn_video"
         android:layout_marginTop="60dp"
         android:textColor="#ffffffff"
         android:background="#ffffdc00"
-        android:layout_below="@+id/btn_help"
-        android:layout_alignLeft="@+id/btn_help"
-        android:layout_alignStart="@+id/btn_help"
-        android:layout_alignRight="@+id/btn_help"
-        android:layout_alignEnd="@+id/btn_help" />
+        android:layout_below="@+id/btn_fact"
+        android:layout_alignLeft="@+id/btn_fact"
+        android:layout_alignStart="@+id/btn_fact"
+        android:layout_alignRight="@+id/btn_fact"
+        android:layout_alignEnd="@+id/btn_fact" />
 
 </RelativeLayout>

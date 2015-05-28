@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,9 +27,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     Sensor accelerometer;
 
     GamePanel gamePanel;
-
-
-
+    private float player_speed = 5;
 
 
     @Override
@@ -37,10 +36,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn_play = (Button) findViewById(R.id.btn_play);
-        btn_play.setOnClickListener(this );
+        btn_play.setOnClickListener(this);
 
-        btn_help = (Button) findViewById(R.id.btn_help);
+        btn_help = (Button) findViewById(R.id.btn_fact);
         btn_help.setOnClickListener(this);
+
+        btn_score = (Button) findViewById(R.id.btn_video);
+        btn_score.setOnClickListener(this);
 
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -76,38 +78,51 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.btn_play:
                 btn_play_clicked();
                 break;
-            case R.id.btn_help:
-                btn_help_clicked();
+            case R.id.btn_fact:
+                btn_facts_clicked();
                 break;
-            case R.id.btn_scores:
+            case R.id.btn_video:
                 btn_scores_clicked();
+                break;
+            default:
                 break;
         }
 
     }
 
     private void btn_play_clicked(){
-//        startActivity(new Intent(getBaseContext(),PlayActivity.class));
             startActivity(new Intent(getBaseContext(), QuizActivity.class));
     }
-    private void btn_help_clicked(){
-
+    private void btn_facts_clicked(){
 
         gamePanel = new GamePanel(this);
         setContentView(gamePanel);
         gameRunning = true;
-
     }
 
     private void btn_scores_clicked(){
+//        startActivity(new Intent(getBaseContext(), VideoActivity.class));
+        startActivity(new Intent(getBaseContext(), LectureActivity.class));
+    }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finishActivity(MainActivity.CONTEXT_INCLUDE_CODE);
+            startActivity(new Intent(getBaseContext(), MainActivity.class));
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
         if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
         {
-            sensor_x_val = event.values[0];
+            
+            sensor_x_val = -event.values[0] * player_speed;
 
 
             if (gameRunning)

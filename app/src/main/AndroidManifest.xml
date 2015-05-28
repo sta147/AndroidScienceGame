@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kayani.com.sciencegamenew" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -48,6 +51,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="kayani.com.sciencegamenew.QuizActivity" />
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kayani.com.sciencegamenew.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LectureActivity"
+            android:label="@string/title_activity_lecture"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kayani.com.sciencegamenew.MainActivity" />
         </activity>
     </application>
 
